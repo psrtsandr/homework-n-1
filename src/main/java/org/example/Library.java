@@ -3,6 +3,9 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Библиотека
+ */
 public class Library {
     private ArrayList<Book> _books = new ArrayList<>();
 
@@ -12,7 +15,10 @@ public class Library {
 
     public void printAvailableBooks() {
         System.out.println("Доступные книги:");
-        _books.forEach(Book::displayInfo);
+        _books
+            .stream()
+            .filter(Book::isAvailable)
+            .forEach(Book::displayInfo);
     }
 
     public List<Book> findBooksByAuthor(String author) {

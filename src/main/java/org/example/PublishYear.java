@@ -1,5 +1,8 @@
 package org.example;
 
+/**
+ * Год публикации
+ */
 public record PublishYear(int value) {
     public PublishYear {
         if (value < 0 || value > 9999) {

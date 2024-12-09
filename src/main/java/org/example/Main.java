@@ -49,6 +49,8 @@ public class Main {
                 false);
 
         var lib = new Library();
+
+        // Добавить книги в библиотеку
         lib.addBook(crimeAndPunishment);
         lib.addBook(caramazovBrothers);
         lib.addBook(demons);
@@ -59,17 +61,21 @@ public class Main {
         lib.addBook(physics);
         lib.addBook(categories);
 
+        // Вывести на консоль доступные книги
         lib.printAvailableBooks();
         System.out.println();
 
+        // Забрать книгу
         crimeAndPunishment.borrowBook();
         lib.printAvailableBooks();
         System.out.println();
 
+        // Вернуть книгу
         warAndPeace.returnBook();
         lib.printAvailableBooks();
         System.out.println();
 
+        // Вывести на консоль книги конкретного автора
         printBooksByAuthor(lib, new BookAuthor("Достоевский Ф.М."));
     }
 

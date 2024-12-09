@@ -1,5 +1,8 @@
 package org.example;
 
+/**
+ * Автор книги
+ */
 public record BookAuthor(String value) {
     public BookAuthor {
         if (value == null || value.isBlank()) {

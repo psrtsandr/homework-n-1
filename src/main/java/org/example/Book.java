@@ -1,5 +1,8 @@
 package org.example;
 
+/**
+ * Книга
+ */
 public class Book {
     private BookTitle _title;
     private BookAuthor _author;

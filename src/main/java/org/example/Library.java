@@ -3,6 +3,9 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Библиотека
+ */
 public class Library {
     private ArrayList<Book> _books = new ArrayList<>();
 

@@ -44,7 +44,7 @@ public class Book {
     }
 
     public void displayInfo() {
-        System.out.println(toString());
+        System.out.println(this);
     }
 
     @Override

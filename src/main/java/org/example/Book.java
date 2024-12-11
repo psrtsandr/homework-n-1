@@ -4,41 +4,41 @@ package org.example;
  * Книга
  */
 public class Book {
-    private BookTitle _title;
-    private BookAuthor _author;
-    private PublishYear _publishYear;
-    private boolean _isAvailable;
+    private BookTitle title;
+    private BookAuthor author;
+    private PublishYear publishYear;
+    private boolean isAvailable;
 
     public Book(BookTitle title, BookAuthor author) {
-        _title = title;
-        _author = author;
+        this.title = title;
+        this.author = author;
     }
 
     public Book(BookTitle title, BookAuthor author, PublishYear publishYear, boolean isAvailable) {
         this(title, author);
-        _publishYear = publishYear;
-        _isAvailable = isAvailable;
+        this.publishYear = publishYear;
+        this.isAvailable = isAvailable;
     }
 
     public BookTitle getTitle() {
-        return _title;
+        return title;
     }
 
     public BookAuthor getAuthor() {
-        return _author;
+        return author;
     }
 
     public PublishYear getPublishYear() {
-        return _publishYear;
+        return publishYear;
     }
 
     public boolean isAvailable() {
-        return _isAvailable;
+        return isAvailable;
     }
 
     public void borrowBook() {
-        if (_isAvailable) {
-            _isAvailable = false;
+        if (isAvailable) {
+            isAvailable = false;
         }
         else {
             System.out.println("Книга недоступна для выдачи");
@@ -46,7 +46,7 @@ public class Book {
     }
 
     public void returnBook() {
-        _isAvailable = true;
+        isAvailable = true;
     }
 
     public void displayInfo() {

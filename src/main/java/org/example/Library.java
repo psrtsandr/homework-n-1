@@ -7,22 +7,22 @@ import java.util.List;
  * Библиотека
  */
 public class Library {
-    private ArrayList<Book> _books = new ArrayList<>();
+    private ArrayList<Book> books = new ArrayList<>();
 
     public void addBook(Book book) {
-        _books.add(book);
+        books.add(book);
     }
 
     public void printAvailableBooks() {
         System.out.println("Доступные книги:");
-        _books
+        books
             .stream()
             .filter(Book::isAvailable)
             .forEach(Book::displayInfo);
     }
 
     public List<Book> findBooksByAuthor(BookAuthor author) {
-        return _books
+        return books
                 .stream()
                 .filter(book -> book.getAuthor().equals(author))
                 .toList();

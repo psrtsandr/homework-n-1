@@ -21,14 +21,10 @@ public class Library {
             .forEach(Book::displayInfo);
     }
 
-    public List<Book> findBooksByAuthor(String author) {
+    public List<Book> findBooksByAuthor(BookAuthor author) {
         return _books
                 .stream()
-                .filter(book -> book.getAuthor().value().equals(author))
+                .filter(book -> book.getAuthor().equals(author))
                 .toList();
-    }
-
-    public List<Book> findBooksByAuthor(BookAuthor author) {
-        return findBooksByAuthor(author.value());
     }
 }

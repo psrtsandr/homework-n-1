@@ -40,6 +40,9 @@ public class Book {
         if (_isAvailable) {
             _isAvailable = false;
         }
+        else {
+            System.out.println("Книга недоступна для выдачи");
+        }
     }
 
     public void returnBook() {

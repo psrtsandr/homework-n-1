@@ -70,6 +70,10 @@ public class Main {
         lib.printAvailableBooks();
         System.out.println();
 
+        // Попытка забрать книгу, недоступную для выдачи
+        warAndPeace.borrowBook();
+        System.out.println();
+
         // Вернуть книгу
         warAndPeace.returnBook();
         lib.printAvailableBooks();
